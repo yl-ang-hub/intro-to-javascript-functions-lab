@@ -97,9 +97,10 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-function greetUser(name, timeOfDay) {
+// Practice to use function expression instead of function keyword to code the func
+const greetUser = (name, timeOfDay) => {
   return `Good ${timeOfDay.trim()}, ${name.trim()}!`;
-}
+};
 
 console.log("Exercise 5 Result:", greetUser("Sam  ", "     morning"));
 
@@ -115,6 +116,9 @@ Complete the exercise in the space below:
 */
 
 function maxOfThree(...nums) {
+  // return Math.max(nums);
+
+  // code without using Math.max()
   let max = 0;
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] > max) {
@@ -270,7 +274,14 @@ Complete the exercise in the space below:
 */
 
 function numArgs(...nums) {
-  return nums.length;
+  // return nums.length;
+
+  // code without using array.length
+  let count = 0;
+  for (const i in nums) {
+    count++;
+  }
+  return count;
 }
 
-console.log("Exercise 12 Result:", numArgs(1, 2, 3, 4));
+console.log("Exercise 12 Result:", numArgs(1, 2, 3, 4, 5, 6, 7));
