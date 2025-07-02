@@ -278,7 +278,7 @@ function numArgs(...nums) {
 
   // code without using array.length and testing for/in loop
   let count = 0;
-  for (const i in nums) {
+  for (const i of nums) {
     count++;
   }
   return count;
